@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3841691442753292352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3841691442753292353}
+  - component: {fileID: 3841691442753292358}
+  m_Layer: 0
+  m_Name: Player Prefs Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &3841691442753292353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841691442753292352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3841691442753292358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841691442753292352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d1313a9bf177647acf91f96c6c8ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixer: {fileID: 24100000, guid: 5a59fef7eb1411b4488bb11e7e261e51, type: 2}
+  soundMixer: {fileID: 24100000, guid: 22f86d7e9408bc14aa19fd34c500e137, type: 2}
+  missionList:
+  - {fileID: 11400000, guid: ca70df788490e914ea7970000dbe2024, type: 2}
+  - {fileID: 11400000, guid: 171d24de12af57d479cd02455174ceec, type: 2}
+  - {fileID: 11400000, guid: 4cdf3b7c0fef641499a95f11c94062a3, type: 2}
+  - {fileID: 11400000, guid: ebd1c4b76d85cd841be910f6047d2e78, type: 2}
+  - {fileID: 11400000, guid: bd48dacf36ff4d24496ea0b84443dab6, type: 2}
+  - {fileID: 11400000, guid: f40965adc5c9da94d8e95af4230a9bac, type: 2}
+  - {fileID: 11400000, guid: a2644d3709dab0e4db4c63d98969dcb6, type: 2}
+  localeName: id-ID
+  listMateri:
+  - Huruf Hiragana
+  - Huruf Hiragana Lanjutan
+  - Ujian - Hiragana
+  - Huruf Katakana
+  - Huruf Katakana Lanjutan
+  - Angka
+  - Angka Lanjutan
+  - Waktu
+  - Waktu Lanjutan
+  - Kata Ganti
+  - Kata Benda
+  - Kata Kerja
+  - Kata Sifat
+  - Kata Keterangan
+  - Kata Tanya
+  - Kata Hubung
+  - Kata Seru
+  - Perkenalan Diri
