@@ -37,7 +37,8 @@ public class BedAction : MonoBehaviour
     private GameObject player;
 
     private ActionController actionController;
-
+    bool isPlayerInTrigger = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +57,14 @@ public class BedAction : MonoBehaviour
         cancelButton.onClick.AddListener(CloseButton);
 
     }
-
+    void Update()
+    {
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
+        {
+            ActionButton();
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+    }
     private void SleepButton()
     {
         soundController.PositiveButtonSound(gameObject);
@@ -162,6 +170,8 @@ public class BedAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = true;
+
             bedCanvas.SetActive(true);
             actionController.canvasTrigger = bedCanvas;
             actionController.isTriggerEntered = true;
@@ -172,6 +182,7 @@ public class BedAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = false;
             bedCanvas.SetActive(false);
             transition.gameObject.SetActive(false);
             sleepPanel.GetComponent<CanvasGroup>().alpha = 0;

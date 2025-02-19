@@ -36,7 +36,9 @@ public class DeskAction : MonoBehaviour
     private GameObject player;
 
     private PlayerController playerController;
-    
+
+    bool isPlayerInTrigger = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,12 @@ public class DeskAction : MonoBehaviour
 
     void Update()
     {
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
+        {
+            ActionButton();
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+
         if (actionController.deskIsActive)
         {
             deskCanvas.SetActive(true);
@@ -63,6 +71,7 @@ public class DeskAction : MonoBehaviour
     private void ShutdownButton()
     {
         soundController.ShutdownSound(gameObject);
+        Cursor.lockState = CursorLockMode.Locked;
 
         StartCoroutine(WaitLaptopClose());
     }
@@ -117,6 +126,8 @@ public class DeskAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = true;
+
             deskCanvas.SetActive(true);
             actionController.canvasTrigger = deskCanvas;
             actionController.isTriggerEntered = true;
@@ -127,6 +138,8 @@ public class DeskAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = false;
+
             deskPanel.SetActive(false);
             deskCanvas.SetActive(false);
             actionController.isTriggerEntered = false;

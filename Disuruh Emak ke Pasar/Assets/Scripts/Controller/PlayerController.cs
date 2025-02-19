@@ -39,16 +39,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         soundController = FindFirstObjectByType<SoundController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            Cursor.lockState = CursorLockMode.Confined;
-        }
 
-        if (Input.GetKeyUp(KeyCode.LeftAlt))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        Cursor.lockState = CursorLockMode.Locked;
+
         string[] separatedData = PlayerPrefsController.instance.GetPositionRotationCharacter().Split(new string[] { "?>?" }, StringSplitOptions.None);
         
         Vector3 startPosition = StringToVector3(separatedData[0]);
@@ -70,6 +63,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         // cek karakter jatuh
         if (transform.position.y < maxFallZone)
         {

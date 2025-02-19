@@ -190,12 +190,14 @@ public class GameController : MonoBehaviour
     {
         soundController.PositiveButtonSound(gameObject);
         StartCoroutine(AnimationMission());
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void PauseButton()
     {
         soundController.PositiveButtonSound(gameObject);
         StartCoroutine(AnimationPause());
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private IEnumerator AnimationMission()
@@ -227,6 +229,7 @@ public class GameController : MonoBehaviour
     private void ResumeButton()
     {
         soundController.PositiveButtonSound(gameObject);
+        Cursor.lockState = CursorLockMode.Locked;
 
         StartCoroutine(AnimationResume());
     }

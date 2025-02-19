@@ -24,6 +24,8 @@ public class SofaAction : MonoBehaviour
     private ActionController actionController;
 
     private bool sit;
+    
+    bool isPlayerInTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,13 @@ public class SofaAction : MonoBehaviour
         sofaCanvas.SetActive(false);
 
         actionButton.onClick.AddListener(ActionButton);
+    }
+    void Update()
+    {
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
+        {
+            ActionButton();
+        }
     }
 
     private void ActionButton()
@@ -148,6 +157,8 @@ public class SofaAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = true;
+
             sofaCanvas.SetActive(true);
             actionController.canvasTrigger = sofaCanvas;
             actionController.isTriggerEntered = true;
@@ -158,6 +169,8 @@ public class SofaAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = false;
+
             sofaCanvas.SetActive(false);
             actionController.isTriggerEntered = false;
         }

@@ -90,6 +90,8 @@ public class ClassroomAction : MonoBehaviour
         yield return null;
     }
 
+
+
     private IEnumerator AnimationCloseGoPanel()
     {
         Time.timeScale = 1f;
@@ -105,6 +107,7 @@ public class ClassroomAction : MonoBehaviour
             actionController.canvasTrigger = classroomCanvas;
             actionController.isTriggerEntered = true;
             StartCoroutine(AnimationGoPanel());
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 

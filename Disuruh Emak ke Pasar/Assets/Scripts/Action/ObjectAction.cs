@@ -19,6 +19,8 @@ public class ObjectAction : MonoBehaviour
 
     private bool open;
 
+    bool isPlayerInTrigger = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,14 @@ public class ObjectAction : MonoBehaviour
         objectCanvas.SetActive(false);
 
         actionButton.onClick.AddListener(ActionButton);
+    }
+
+    private void Update()
+    {
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
+        {
+            ActionButton();
+        }
     }
 
     private void ActionButton()
@@ -52,6 +62,7 @@ public class ObjectAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = true;
             objectCanvas.SetActive(true);
             actionController.canvasTrigger = objectCanvas;
             actionController.isTriggerEntered = true;
@@ -62,6 +73,8 @@ public class ObjectAction : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            isPlayerInTrigger = false;
+
             objectCanvas.SetActive(false);
             actionController.isTriggerEntered = false;
         }
