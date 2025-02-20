@@ -16,16 +16,16 @@ public class CinemachineCoreInput : MonoBehaviour
 
     float HandleAxisInputDelegate(string axisName)
     {
-        switch (axisName)
-        {
-            case "Touch X":
-                return touchField.touchDist.x / touchSensitivity;
-            case "Touch Y":
-                return touchField.touchDist.y / touchSensitivity;
-            default:
-                Debug.LogError("Input <" + axisName + "> Tidak ada.", this);
-                break;
-        }
+        //switch (axisName)
+        //{
+        //    case "Touch X":
+        //        return touchField.touchDist.x / touchSensitivity;
+        //    case "Touch Y":
+        //        return touchField.touchDist.y / touchSensitivity;
+        //    default:
+        //        Debug.LogError("Input <" + axisName + "> Tidak ada.", this);
+        //        break;
+        //}
 
         return 0f;
     }

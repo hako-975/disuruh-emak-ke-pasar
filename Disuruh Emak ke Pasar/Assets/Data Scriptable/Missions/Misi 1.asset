@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e4c1b93a62daf408f19c52b038a764, type: 3}
   m_Name: Misi 1
   m_EditorClassIdentifier: 
-  titleMission: 'Misi 1: Registrasi & Login Akun Jepang Cita'
-  detailMission: "Detail Misi:\r\nUntuk memulai proses registrasi, langkah pertama
-    adalah membuka laptop dan mengakses aplikasi browser. Kemudian, di kolom pencarian
-    ketikkan kata kunci \"JepangCita\". Lalu, klik menu \"Registrasi\". Setelah formulir
-    terisi lengkap, klik tombol registrasi untuk menyelesaikan proses pendaftaran.
-    Setelah berhasil mendaftar, klik menu \"Login\" lalu, masukkan email dan password
-    yang telah dibuat saat proses registrasi untuk masuk ke halaman dashboard JepangCita.\r"
+  titleMission: 'Misi 1: Dipanggil Emak tuh'
+  detailMission: "Detail Misi:\r\nTemuin emak, dengerin instruksinya. Emak akan memberikan
+    daftar belanjaan yang harus dibeli di pasar. Setelah menerima daftar belanja
+    dan uang, segera bersiap untuk pergi. Setelah semua persiapan selesai, buka pintu
+    rumah dan lanjutkan perjalanan menuju pasar untuk memulai misi berikutnya.\r"

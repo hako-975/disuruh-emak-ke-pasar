@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
     float vertical;
 
     bool isWalking = false;
-    
+
+    [SerializeField]
     private GameObject cam;
 
     public bool canMove = true;
@@ -47,7 +48,6 @@ public class PlayerController : MonoBehaviour
         Vector3 startPosition = StringToVector3(separatedData[0]);
         Quaternion startRotation = StringToQuaternion(separatedData[1]);
 
-        cam = GameObject.FindGameObjectWithTag("MainCamera"); 
         cc = GetComponent<CharacterController>();
 
         animator = GetComponentInChildren<Animator>();

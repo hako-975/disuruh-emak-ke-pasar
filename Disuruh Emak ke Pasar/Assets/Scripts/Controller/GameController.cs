@@ -60,6 +60,9 @@ public class GameController : MonoBehaviour
     private GameObject mainMenuPanel;
 
     [SerializeField]
+    private GameObject tutorialPanel;
+
+    [SerializeField]
     private ActionController actionController;
 
     private bool windowMission = false;
@@ -85,8 +88,13 @@ public class GameController : MonoBehaviour
     string titleMission;
     string detailMission;
 
+    [SerializeField]
+    GameObject secondCamera;
+
     void Awake()
     {
+        secondCamera.SetActive(false);
+
         if (PlayerPrefsController.instance.GetCharacterSelection() == "Girl")
         {
             Instantiate(playerGirlPrefabs);
@@ -101,6 +109,13 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Mission();
+
+        if (PlayerPrefsController.instance.GetTutorial() == 0)
+        {
+            tutorialPanel.SetActive(true);
+            tutorialPanel.GetComponent<Animator>().SetTrigger("Show");
+            PlayerPrefsController.instance.SetTutorial(1);
+        }
 
         PlayerPrefsController.instance.SetLastScene(SceneManager.GetActiveScene().name);
 

@@ -62,6 +62,16 @@ public class PlayerPrefsController : MonoBehaviour
         }
     }
 
+    public int GetTutorial()
+    {
+        return PlayerPrefs.GetInt("Tutorial", 0);
+    }
+
+    public void SetTutorial(int boolean)
+    {
+        PlayerPrefs.SetInt("Tutorial", boolean);
+    }
+
     #region Mission
     public int GetMission()
     {
