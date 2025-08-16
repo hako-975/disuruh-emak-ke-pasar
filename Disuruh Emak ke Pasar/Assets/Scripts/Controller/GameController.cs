@@ -88,13 +88,8 @@ public class GameController : MonoBehaviour
     string titleMission;
     string detailMission;
 
-    [SerializeField]
-    GameObject secondCamera;
-
     void Awake()
     {
-        secondCamera.SetActive(false);
-
         if (PlayerPrefsController.instance.GetCharacterSelection() == "Girl")
         {
             Instantiate(playerGirlPrefabs);

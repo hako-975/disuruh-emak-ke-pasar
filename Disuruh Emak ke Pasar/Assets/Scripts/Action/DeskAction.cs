@@ -7,7 +7,6 @@ public class DeskAction : MonoBehaviour
     [SerializeField]
     private SoundController soundController;
 
-    [SerializeField]
     private Camera mainCam;
 
     [SerializeField]
@@ -39,13 +38,15 @@ public class DeskAction : MonoBehaviour
 
     bool isPlayerInTrigger = false;
 
+    bool isOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         actionController = GetComponentInParent<ActionController>();
         playerController = player.GetComponent<PlayerController>();
-
+        mainCam = FindObjectOfType<Camera>();
         deskCanvas.SetActive(false);
         deskPanel.SetActive(false);
 
@@ -55,7 +56,7 @@ public class DeskAction : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R) && isOpen == false)
         {
             ActionButton();
             Cursor.lockState = CursorLockMode.Confined;
@@ -70,6 +71,8 @@ public class DeskAction : MonoBehaviour
 
     private void ShutdownButton()
     {
+        isOpen = false;
+
         soundController.ShutdownSound(gameObject);
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -97,6 +100,7 @@ public class DeskAction : MonoBehaviour
 
     private void ActionButton()
     {
+        isOpen = true;
         soundController.OpenSound(gameObject);
         StartCoroutine(WaitDeskPanelOpen());
     }

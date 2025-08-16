@@ -192,77 +192,77 @@ public class BrowserPanel : MonoBehaviour
     private bool IsJepangCitaInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        if (lowercaseInput.Contains("httpsjepangcitacomdashboard") || lowercaseInput.Contains("jepangcitacomdashboard"))
+        if (lowercaseInput.Contains("httpspasarcomdashboard") || lowercaseInput.Contains("pasarcomdashboard"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacomjadwal") || lowercaseInput.Contains("jepangcitacomjadwal"))
+        else if (lowercaseInput.Contains("httpspasarcomjadwal") || lowercaseInput.Contains("pasarcomjadwal"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacommateri") || lowercaseInput.Contains("jepangcitacommateri"))
+        else if (lowercaseInput.Contains("httpspasarcommateri") || lowercaseInput.Contains("pasarcommateri"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacomlogin") || lowercaseInput.Contains("jepangcitacomlogin"))
+        else if (lowercaseInput.Contains("httpspasarcomlogin") || lowercaseInput.Contains("pasarcomlogin"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacomresetpassword") || lowercaseInput.Contains("jepangcitacomresetpassword"))
+        else if (lowercaseInput.Contains("httpspasarcomresetpassword") || lowercaseInput.Contains("pasarcomresetpassword"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacomchangepassword") || lowercaseInput.Contains("jepangcitacomchangepassword"))
+        else if (lowercaseInput.Contains("httpspasarcomchangepassword") || lowercaseInput.Contains("pasarcomchangepassword"))
         {
             return false;
         }
-        else if (lowercaseInput.Contains("httpsjepangcitacomregister") || lowercaseInput.Contains("jepangcitacomregister"))
+        else if (lowercaseInput.Contains("httpspasarcomregister") || lowercaseInput.Contains("pasarcomregister"))
         {
             return false;
         }
-        return lowercaseInput.Contains("jepangcita") || lowercaseInput.Contains("jepang cita") || lowercaseInput.Contains("jepangcitacom") || lowercaseInput.Contains("httpsjepangcitacom");
+        return lowercaseInput.Contains("pasar") || lowercaseInput.Contains("pasar") || lowercaseInput.Contains("pasarcom") || lowercaseInput.Contains("httpspasarcom");
     }
 
     private bool IsJepangCitaDashboardInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitadashboard") || lowercaseInput.Contains("jepang cita dashboard") || lowercaseInput.Contains("jepangcitacomdashboard") || lowercaseInput.Contains("httpsjepangcitacomdashboard");
+        return lowercaseInput.Contains("pasardashboard") || lowercaseInput.Contains("pasar dashboard") || lowercaseInput.Contains("pasarcomdashboard") || lowercaseInput.Contains("httpspasarcomdashboard");
     }
 
     private bool IsJepangCitaJadwalInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitajadwal") || lowercaseInput.Contains("jepang cita jadwal") || lowercaseInput.Contains("jepangcitacomjadwal") || lowercaseInput.Contains("httpsjepangcitacomjadwal");
+        return lowercaseInput.Contains("pasarjadwal") || lowercaseInput.Contains("pasar jadwal") || lowercaseInput.Contains("pasarcomjadwal") || lowercaseInput.Contains("httpspasarcomjadwal");
     }
 
     private bool IsJepangCitaMateriInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitamateri") || lowercaseInput.Contains("jepang cita materi") || lowercaseInput.Contains("jepangcitacommateri") || lowercaseInput.Contains("httpsjepangcitacommateri");
+        return lowercaseInput.Contains("pasarmateri") || lowercaseInput.Contains("pasar materi") || lowercaseInput.Contains("pasarcommateri") || lowercaseInput.Contains("httpspasarcommateri");
     }
 
     private bool IsJepangCitaRegisterInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitaregister") || lowercaseInput.Contains("jepang cita register") || lowercaseInput.Contains("jepangcitacomregister") || lowercaseInput.Contains("httpsjepangcitacomregister");
+        return lowercaseInput.Contains("pasarregister") || lowercaseInput.Contains("pasar register") || lowercaseInput.Contains("pasarcomregister") || lowercaseInput.Contains("httpspasarcomregister");
     }
 
     private bool IsJepangCitaLoginInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitalogin") || lowercaseInput.Contains("jepang cita login") || lowercaseInput.Contains("jepangcitacomlogin") || lowercaseInput.Contains("httpsjepangcitacomlogin");
+        return lowercaseInput.Contains("pasarlogin") || lowercaseInput.Contains("pasar login") || lowercaseInput.Contains("pasarcomlogin") || lowercaseInput.Contains("httpspasarcomlogin");
     }
 
     private bool IsJepangCitaResetPasswordInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitaresetpassword") || lowercaseInput.Contains("jepang cita resetpassword") || lowercaseInput.Contains("jepangcitacomresetpassword") || lowercaseInput.Contains("httpsjepangcitacomresetpassword");
+        return lowercaseInput.Contains("pasarresetpassword") || lowercaseInput.Contains("pasar resetpassword") || lowercaseInput.Contains("pasarcomresetpassword") || lowercaseInput.Contains("httpspasarcomresetpassword");
     }
 
     private bool IsJepangCitaChangePasswordInput(string input)
     {
         string lowercaseInput = Regex.Replace(input, "[^a-zA-Z0-9]", "").Trim().ToLower();
-        return lowercaseInput.Contains("jepangcitachangepassword") || lowercaseInput.Contains("jepang cita changepassword") || lowercaseInput.Contains("jepangcitacomchangepassword") || lowercaseInput.Contains("httpsjepangcitacomchangepassword");
+        return lowercaseInput.Contains("pasarchangepassword") || lowercaseInput.Contains("pasar changepassword") || lowercaseInput.Contains("pasarcomchangepassword") || lowercaseInput.Contains("httpspasarcomchangepassword");
     }
 
     private bool IsTemukanInput(string input)
@@ -355,35 +355,35 @@ public class BrowserPanel : MonoBehaviour
     {
         if (currentPanel == jepangCitaPanel)
         {
-            urlInput.text = "https://jepangcita.com/";
+            urlInput.text = "https://pasar.com/";
         }
         else if (currentPanel == jepangCitaDashboardPanel)
         {
-            urlInput.text = "https://jepangcita.com/dashboard";
+            urlInput.text = "https://pasar.com/dashboard";
         }
         else if (currentPanel == jepangCitaJadwalPanel)
         {
-            urlInput.text = "https://jepangcita.com/jadwal";
+            urlInput.text = "https://pasar.com/jadwal";
         }
         else if (currentPanel == jepangCitaMateriPanel)
         {
-            urlInput.text = "https://jepangcita.com/materi";
+            urlInput.text = "https://pasar.com/materi";
         }
         else if (currentPanel == jepangCitaLoginPanel)
         {
-            urlInput.text = "https://jepangcita.com/login";
+            urlInput.text = "https://pasar.com/login";
         }
         else if (currentPanel == jepangCitaResetPasswordPanel)
         {
-            urlInput.text = "https://jepangcita.com/resetpassword";
+            urlInput.text = "https://pasar.com/resetpassword";
         }
         else if (currentPanel == jepangCitaChangePasswordPanel)
         {
-            urlInput.text = "https://jepangcita.com/changepassword";
+            urlInput.text = "https://pasar.com/changepassword";
         }
         else if (currentPanel == jepangCitaRegisterPanel)
         {
-            urlInput.text = "https://jepangcita.com/register";
+            urlInput.text = "https://pasar.com/register";
         }
         else if (currentPanel == mainPanel)
         {
@@ -393,47 +393,47 @@ public class BrowserPanel : MonoBehaviour
 
     public void OnLogoNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com");
+        OnInputEndEdit("https://pasar.com");
     }
 
     public void OnDashboardNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/dashboard");
+        OnInputEndEdit("https://pasar.com/dashboard");
     }
 
     public void OnRegisterNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/register");
+        OnInputEndEdit("https://pasar.com/register");
     }
 
     public void OnLoginNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/login");
+        OnInputEndEdit("https://pasar.com/login");
     }
 
     public void OnJadwalNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/jadwal");
+        OnInputEndEdit("https://pasar.com/jadwal");
     }
 
     public void OnMateriNavButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/materi");
+        OnInputEndEdit("https://pasar.com/materi");
     }
 
     public void OnResetPasswordButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/resetpassword");
+        OnInputEndEdit("https://pasar.com/resetpassword");
     }
 
     public void OnChangePasswordButtonClick()
     {
-        OnInputEndEdit("https://jepangcita.com/changepassword");
+        OnInputEndEdit("https://pasar.com/changepassword");
     }
 
     public void OnLogoutNavButtonClick()
     {
         PlayerPrefsController.instance.SetCredentialJepangCita(0);
-        OnInputEndEdit("https://jepangcita.com/login");
+        OnInputEndEdit("https://pasar.com/login");
     }
 }

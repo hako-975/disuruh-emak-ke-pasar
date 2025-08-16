@@ -40,13 +40,11 @@ public class SettingsController : MonoBehaviour
 
     CinemachineFreeLook cinemachineFreeLook;
 
-    CinemachineCoreInput touchSensitivity;
 
     // Start is called before the first frame update
     void Start()
     {
         cinemachineFreeLook = FindObjectOfType<CinemachineFreeLook>();
-        touchSensitivity = FindObjectOfType<CinemachineCoreInput>();
 
         resetButton.onClick.AddListener(ResetButton);
 
@@ -117,7 +115,6 @@ public class SettingsController : MonoBehaviour
     {
         soundController.PositiveButtonSound(gameObject);
 
-        touchSensitivity.touchSensitivity = sensitivityCamera;
         PlayerPrefsController.instance.SetSensitivityCamera((int)sensitivityCamera);
     }
 

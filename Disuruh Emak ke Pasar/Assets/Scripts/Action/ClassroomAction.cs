@@ -69,7 +69,7 @@ public class ClassroomAction : MonoBehaviour
         player.GetComponent<PlayerController>().canMove = true;
         player.GetComponent<CharacterController>().enabled = true;
         PlayerPrefsController.instance.DeleteKey("PositionRotationCharacter");
-        PlayerPrefsController.instance.SetNextScene("Classroom");
+        PlayerPrefsController.instance.SetNextScene("MainMenu");
     }
 
     private void CloseButton()

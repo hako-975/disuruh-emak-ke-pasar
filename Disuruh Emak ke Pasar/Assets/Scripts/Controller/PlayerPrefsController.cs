@@ -21,7 +21,6 @@ public class PlayerPrefsController : MonoBehaviour
     private AudioMixer soundMixer;
 
     CinemachineFreeLook cinemachineFreeLook;
-    CinemachineCoreInput touchSensitivity;
 
     [Header("Mission List")]
     public Mission[] missionList;
@@ -48,17 +47,11 @@ public class PlayerPrefsController : MonoBehaviour
         }
 
         cinemachineFreeLook = FindObjectOfType<CinemachineFreeLook>();
-        touchSensitivity = FindObjectOfType<CinemachineCoreInput>();
 
         if (cinemachineFreeLook)
         {
             cinemachineFreeLook.m_CommonLens = true;
             cinemachineFreeLook.m_Lens.FieldOfView = GetZoomCamera();
-        }
-
-        if (touchSensitivity)
-        {
-            touchSensitivity.touchSensitivity = GetSensitivityCamera();
         }
     }
 

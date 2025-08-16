@@ -29,8 +29,7 @@ public class PlayerController : MonoBehaviour
 
     bool isWalking = false;
 
-    [SerializeField]
-    private GameObject cam;
+    public Camera cam;
 
     public bool canMove = true;
 
